@@ -1,0 +1,36 @@
+/*
+    https://stackoverflow.com/questions/40131174/how-do-i-override-the-style-of-primeng-components
+    I couldn't find better solution for styling primeNg components. Idk how the below code works
+*/
+:host{
+    ::ng-deep .card .p-card-header{
+        background-color: #341232;
+    }
+    ::ng-deep .register-button-item .p-button{
+        width: 100%;
+    }
+    ::ng-deep .password-item .password-item{
+        width: 100%;
+    }
+}
+.input-element{
+    width: 100%;
+}
+.username-item{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.register-button-item{
+    margin-top: 20px;
+}
+.register-button-item .button{
+    width: 100%;
+}
+.password-input{
+    display: block;
+}
+.input-error{
+    color: red;
+}
+
+

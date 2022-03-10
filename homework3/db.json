@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "ycaktirma",
+      "password": "123qwe.*"
+    },
+    {
+      "username": "ycaktirma2",
+      "password": "123qwe",
+      "id": 2
+    },
+    {
+      "username": "ycaktirma3",
+      "password": "123qwe",
+      "id": 3
+    },
+    {
+      "username": "newuser",
+      "password": "123456",
+      "id": 4
+    },
+    {
+      "username": "newuser2",
+      "password": "123qwe4r",
+      "id": 5
+    },
+    {
+      "username": "yarkin123",
+      "password": "yarkin123",
+      "id": 6
+    }
+  ]
+}
