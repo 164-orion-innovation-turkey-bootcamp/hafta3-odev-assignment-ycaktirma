@@ -29,6 +29,24 @@
       "username": "yarkin123",
       "password": "yarkin123",
       "id": 6
+    },
+    {
+      "user": {
+        "name": "ycaktirma",
+        "email": "ycaktirma@gmail.com",
+        "password": "123qweR"
+      },
+      "id": 7
+    },
+    {
+      "username": "sadsa",
+      "password": "sadsad",
+      "id": 8
+    },
+    {
+      "username": "deneme",
+      "password": "deneme",
+      "id": 9
     }
   ]
 }

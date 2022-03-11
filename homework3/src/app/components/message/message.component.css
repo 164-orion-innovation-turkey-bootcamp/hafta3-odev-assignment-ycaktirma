@@ -1,0 +1,29 @@
+.messagebox-container{
+    width: 100%;
+    height: 40px;
+    background-color: #e63947ce;
+    border-bottom:4px solid #e63947;
+    border-radius: 5px;
+}
+.icon{
+    display: inline-block;
+
+}
+.message{
+    display: inline-block;
+    padding-left: 20px;
+    color: white;
+    font-weight: 500;
+    position: relative;
+    top:25%;
+    
+    
+}
+.error-icon{
+    color: white;
+    font-size: 120%;
+    vertical-align: middle;
+}
+.message-span{
+    padding-left: 20px;
+}

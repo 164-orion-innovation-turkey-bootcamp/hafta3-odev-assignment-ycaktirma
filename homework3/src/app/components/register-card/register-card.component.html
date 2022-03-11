@@ -1,19 +1,20 @@
-<p-card header="Register" styleClass="card">
+<div class="card">
     <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <h1 class="form-title">Register</h1>
         <div class="username-item">
-            <label for="username-input">Username</label>
-            <input id="username-input" class="input-element" pInputText type="text" formControlName="username">
-            <small class="input-error" *ngIf="this.registerForm.get('username').errors?.['required'] != null && this.registerForm.get('username').touched == true"> This field is required. </small>
+            <label class="input-title" for="username-input">Username*</label>
+            <input id="username-input" [ngClass]="{'input-element':true, 'input-element-error':this.registerForm.get('username').errors != null && this.registerForm.get('username').touched == true}" type="text" formControlName="username" autocomplete="off" placeholder="Enter your username">
+            <small class="input-error" *ngIf="this.registerForm.get('username').errors?.['required'] != null && this.registerForm.get('username').touched == true" > This field is required. </small>
         </div>
         <div class="password-item">
-            <label for="password-input">Password</label>
-            <input id="password-input" class="input-element" pInputText type="password" formControlName="password">
+            <label class="input-title" for="password-input">Password*</label>
+            <input id="password-input" [ngClass]="{'input-element':true, 'input-element-error':this.registerForm.get('password').errors != null && this.registerForm.get('password').touched == true}" type="password" formControlName="password" placeholder="Enter your password">
             <small class="input-error" *ngIf="this.registerForm.get('password').errors?.['required'] != null && this.registerForm.get('password').touched == true"> This field is required. </small>
             <small class="input-error" *ngIf="this.registerForm.get('password').errors?.['minlength'] != null && this.registerForm.get('password').touched == true"> Password length has to be at least 6 characters. </small>
         </div>
         <div class="register-button-item">
-            <p-button [disabled]="!this.registerForm.valid" type="submit" label="Register" ></p-button>
+            <input [disabled]="!this.registerForm.valid" type="submit" value="Register" class="submit-button">
         </div>
     </form>
 
-</p-card>
+</div>

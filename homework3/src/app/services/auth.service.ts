@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AccountCredentials } from '../models/account-credentials';
 import { Observable, Subscription } from 'rxjs';
+import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
@@ -10,7 +11,7 @@ export class AuthService {
   private API_URL_BASE = "http://localhost:3000/";
   private userTable = 'users';
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient,private router:Router) { }
 
   createNewAccount(account:AccountCredentials){
     return this.http.post(this.API_URL_BASE+this.userTable, account);
@@ -24,7 +25,7 @@ export class AuthService {
   login(credentials:AccountCredentials): Observable<boolean>{
     //Login logic flag
     let successful:boolean = false;
-    //Return new observable based 
+    //Return new observable 
     return new Observable(subscriber =>{
       this.http.get<any[]>(this.API_URL_BASE+this.userTable).subscribe(data=>{
         data.forEach(user=>{
@@ -53,5 +54,10 @@ export class AuthService {
   isLoggedIn():boolean{
     let user = localStorage.getItem('user');
     return user != null;
+  }
+
+  logout(){
+    localStorage.removeItem('user');
+    this.router.navigateByUrl('/login');
   }
 }

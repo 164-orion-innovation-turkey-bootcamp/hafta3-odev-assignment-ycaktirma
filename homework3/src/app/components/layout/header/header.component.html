@@ -1,0 +1,29 @@
+<div class="header-container">
+    <div class="logo">
+        
+    </div>
+    <nav class="navigation">
+        <ul class="nav-list">
+            <li
+                routerLink="dashboard"
+                routerLinkActive="navigation-link-active"
+                class="navigation-link"
+                *ngIf="this.isLoggedIn()">
+                <a>Dashboard</a>
+            </li>
+            <li
+                routerLink="/login"
+                routerLinkActive="navigation-link-active"
+                class="navigation-link"
+                *ngIf="!isLoggedIn()">
+                <a >Login</a>
+            </li>
+            <li 
+                (click)="this.logout()"
+                class="navigation-link"
+                *ngIf="isLoggedIn()">
+                <a >Logout</a>
+            </li>
+        </ul>
+    </nav>
+</div>

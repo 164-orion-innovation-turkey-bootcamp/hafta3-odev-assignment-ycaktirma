@@ -29,7 +29,11 @@ export class LoginCardComponent implements OnInit,OnDestroy {
     this.createForm();
   }
   ngOnDestroy():void{
-    this.loginFormSubscription.unsubscribe();
+    //If the subscription hasn't been assigned(user can try to navigate dashboard without interacting login form), don't perform unsubscribe
+    if(this.loginFormSubscription != undefined){
+      this.loginFormSubscription.unsubscribe();
+    }
+    
   }
 
 

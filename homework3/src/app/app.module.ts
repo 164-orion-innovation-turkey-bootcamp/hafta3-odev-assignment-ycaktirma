@@ -7,14 +7,13 @@ import { LoginCardComponent } from './components/login-card/login-card.component
 import { RegisterCardComponent } from './components/register-card/register-card.component';
 import { DashboardPageComponent } from './pages/dashboard-page/dashboard-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
-import { CardModule } from 'primeng/card';
-import { ButtonModule } from 'primeng/button';
-import { InputTextModule } from 'primeng/inputtext';
-import { PasswordModule } from 'primeng/password';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { MessageModule } from 'primeng/message';
+import { HeaderComponent } from './components/layout/header/header.component';
+import { BodyComponent } from './components/layout/body/body.component';
+import { FooterComponent } from './components/layout/footer/footer.component';
+import { MessageComponent } from './components/message/message.component';
 
 @NgModule({
   declarations: [
@@ -22,19 +21,18 @@ import { MessageModule } from 'primeng/message';
     LoginCardComponent,
     RegisterCardComponent,
     DashboardPageComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    HeaderComponent,
+    BodyComponent,
+    FooterComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    CardModule,
-    ButtonModule,
-    InputTextModule,
-    PasswordModule,
     ReactiveFormsModule,
-    HttpClientModule,
-    MessageModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
