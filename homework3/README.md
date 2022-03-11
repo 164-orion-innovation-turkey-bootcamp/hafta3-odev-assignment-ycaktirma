@@ -1,9 +1,9 @@
 # Simple Login App
 
-##Note
+## Note
 Don't forget to run `json-server db.json`
 
-##Screenshots
+## Screenshots
 Login Page
 ![Login page](/homework3/screenshots/ss1.png)
 Dashboard
